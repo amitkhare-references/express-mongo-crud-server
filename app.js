@@ -13,7 +13,9 @@ const db = mongoose.connection;
 var Genre = require("./models/genre");
 var Book = require("./models/book");
 
-
+app.listen(8080, function () {
+    console.log("running on port 8080");
+});
 
 app.get("/",function (req, res) {
     res.send("use the /api endpoint gdg");
@@ -125,6 +127,3 @@ app.get("/api/books/:_id",function (req, res) {
     });
 });
 
-app.listen(8080, function () {
-    console.log("running on port 8080");
-});
